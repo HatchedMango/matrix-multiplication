@@ -17,15 +17,22 @@ module.exports = {
     },
     devtool: 'source-map',
     module: {
-        rules: [{
-            test: /\.jsx?$/,
-            include: SRC_DIR,
-            use: [{
-                loader: 'babel-loader',
-                options: {
-                    presets: ['react', 'es2015']
-                }
-            }]
-        }]
+        rules: [
+            {
+                test: /\.jsx?$/,
+                include: SRC_DIR,
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['react', 'es2015']
+                    }
+                }]
+            },
+            {
+                test: /\.scss$/,
+                include: SRC_DIR,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            }
+        ]
     }
 };

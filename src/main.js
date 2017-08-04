@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './scripts/app';
+import style from './style/style.scss';
+import App from './scripts/App';
 
 ReactDOM.render(<App />, document.getElementById('app'));
 
 if (module.hot) {
-    module.hot.accept('./scripts/app.js', () => {
-        const NextRootContainer = require('./scripts/app.js').default;
+    module.hot.accept('./scripts/App.js', () => {
+        const NextRootContainer = require('./scripts/App.js').default;
         ReactDOM.render(<App />, document.getElementById('app'));
     });
 }
