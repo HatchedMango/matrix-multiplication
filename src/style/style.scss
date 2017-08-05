@@ -13,31 +13,82 @@ body {
     margin-top: 10px;
     width: 80%;
     max-width: 1200px;
-    height: 450px;
     background-color: white; 
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     border-radius: 3px;
 
-    #matrix-space {
+    #operation-space {
+        padding: 0.5em;
+
+        #expression {
+            width: 100%;
+            max-width: 40em;
+            height: 22em;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #result {
+            width: 100%;
+            max-width: 40em;
+            height: 22em;
+            margin: 0 auto;
+            position: relative;
+        }
+
         .matrix {
-            width: 30%;
-            padding: 8px;
-            margin: 5px;
+            position: relative;
+            padding: 0.5em;
+            width: 46%;
+            max-width: 20em;
+            height: auto;
+            margin: 2%;
             float: left;
-            border: 1px solid #ccc;
-            border-radius: 3px;
             box-sizing: border-box;
 
-            .cell {
-                min-width: 3em;
-                width: 30%;
-                padding: 12px;
-                margin: 3px;
-                display: inline-block;
-                border: 1px solid #ccc;
-                border-radius: 3px;
-                box-sizing: border-box;
+            .left-bracket, .right-bracket {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 3%;
+                border-top: 3px solid black;
+                border-bottom: 3px solid black;
             }
+
+            .left-bracket {
+                left: 0;
+                border-left: 3px solid black; 
+            }
+
+            .right-bracket {
+                right: 0;
+                border-right: 3px solid black; 
+            }
+
+            .matrix-content {
+                position: absolute;
+                top: 2%;
+                left: 2%;
+                bottom: 2%;
+                right: 2%;
+
+                .cell {
+                    width: 29.33%;
+                    height: 29.33%;
+                    padding: 2%;
+                    margin: 2%;
+                    border: 1px solid #ccc;
+                    border-radius: 3px;
+                    box-sizing: border-box;
+                    text-align: center;
+                }
+            }
+        }
+
+        .matrix:before {
+            content: '';
+            display: block;
+            margin-top: 100%;
         }
     }
 }

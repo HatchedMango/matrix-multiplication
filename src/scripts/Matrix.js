@@ -5,7 +5,11 @@ export default function Matrix(props) {
 
   return (
     <div className='matrix'>
-      {cellDisplays}
+      <div className='left-bracket'></div>
+        <div className='matrix-content'>
+          {cellDisplays}
+        </div>
+      <div className='right-bracket'></div>
     </div>
   );
 }

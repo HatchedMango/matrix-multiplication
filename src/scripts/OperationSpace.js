@@ -8,7 +8,10 @@ export default class OperationSpace extends React.Component {
 
     return (
       <div id='operation-space'>
-        {expressionDisplay}
+        <div id='expression'>
+          <h2>Expression</h2>
+          {expressionDisplay}
+        </div>
         {resultDisplay}
       </div>
     );
@@ -18,20 +21,18 @@ export default class OperationSpace extends React.Component {
 function createExpression(props) {
   return props.operands.map((matrix, index) => {
     return (
-      <div id='expression' key={index}>
-        <Matrix 
-          cells={matrix.cells}
-          columnCount={matrix.columnCount}
-          handleChange={(cellIndex, event) => props.handleChange(cellIndex, event, index)}
-        />
-      </div>
+      <Matrix 
+        cells={matrix.cells}
+        columnCount={matrix.columnCount}
+        handleChange={(cellIndex, event) => props.handleChange(cellIndex, event, index)}
+      />
     );
   })
 }
 
 function createResultWhenReady(resultMatrix) {
   if (!resultMatrix.cells.length)
-    return <div id='result'></div>;
+    return <div></div>;
   else
     return (
       <div id='result'>

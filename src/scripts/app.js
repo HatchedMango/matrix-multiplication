@@ -15,6 +15,17 @@ export default class App extends React.Component {
           cells: [9,3,4,2,1,4,2,3,4],
           columnCount: 3,
           rowCount: 3
+        },
+        {
+          cells: [9,3,4,2,1,4,2,3,4],
+          columnCount: 3,
+          rowCount: 3
+        }
+        ,
+        {
+          cells: [9,3,4,2,1,4,2,3,4],
+          columnCount: 3,
+          rowCount: 3
         }
       ],
       resultMatrix: {
