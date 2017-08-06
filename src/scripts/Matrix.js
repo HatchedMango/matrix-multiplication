@@ -20,7 +20,12 @@ function createCells(props) {
     const className = `cell row-${rowNum}`
 
     return (
-      <input key={index} className={className} value={cell} onChange={(event) => props.handleChange(index, event)}>
+      <input 
+        key={index} 
+        className={className} 
+        value={cell} 
+        onChange={(event) => props.handleCellChange(index, event)}
+      >
       </input>
     );
   })

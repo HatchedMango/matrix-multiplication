@@ -7,34 +7,18 @@ body {
 }
 
 #app {
-    position: relative;
     margin: auto;
-    display: block;
     margin-top: 10px;
-    width: 80%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1100px;
     background-color: white; 
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     border-radius: 3px;
+    min-width: 28em;
 
     #operation-space {
+        display: flex;
         padding: 0.5em;
-
-        #expression {
-            width: 100%;
-            max-width: 40em;
-            height: 22em;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        #result {
-            width: 100%;
-            max-width: 40em;
-            height: 22em;
-            margin: 0 auto;
-            position: relative;
-        }
 
         .matrix {
             position: relative;
@@ -90,5 +74,50 @@ body {
             display: block;
             margin-top: 100%;
         }
+
+        #expression {
+            display: flex;
+            margin: auto;
+            flex-grow: 2;
+        }
+
+        #equals {
+            margin: auto;
+            flex-grow: 0.1;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        #result {
+            display: flex;
+            margin: auto;
+            flex-grow: 1;
+
+            .matrix {
+                display: block;
+                position: relative;
+                padding: 0.5em;
+                width: 96%;
+                max-width: 20em;
+                height: auto;
+                margin: 4%;
+                float: left;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .calculate {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        margin: 0.5em;
+        margin-top: 0;
+        padding: 0.5em 0.8em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 2px;
     }
 }
